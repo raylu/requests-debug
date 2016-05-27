@@ -201,8 +201,7 @@ class HTTPConnectionPool(ConnectionPool, RequestMethods):
         log.info("Starting new HTTP connection (%d): %s" %
                  (self.num_connections, self.host))
         return HTTPConnection(host=self.host,
-                              port=self.port,
-                              strict=self.strict)
+                              port=self.port)
 
     def _get_conn(self, timeout=None):
         """
